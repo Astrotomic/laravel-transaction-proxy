@@ -36,7 +36,7 @@ class MyClass
 
 You can call the `transaction()` without any argument and the method after will be called in a transaction.
 
-This example will call the `delete()` method in a transaction. 
+This example will call the `delete()` method in a transaction.
 This is useful if you have any listeners also running database queries, like deleting child models.
 The transaction will prevent you from corrupted data if any of the queries fails.
 
