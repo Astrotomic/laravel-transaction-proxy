@@ -42,7 +42,7 @@ final class HasTransactionCallsTest extends TestCase
 
         try {
             $post->transaction()->updateException();
-        } catch(Exception $exception) {
+        } catch (Exception $exception) {
             $this->assertInstanceOf(RuntimeException::class, $exception);
         }
 
@@ -56,7 +56,7 @@ final class HasTransactionCallsTest extends TestCase
             'name' => 'test',
         ]);
 
-        $post->transaction(fn(Post $post) => $post->update([
+        $post->transaction(fn (Post $post) => $post->update([
             'name' => 'committed',
         ]));
 
@@ -71,8 +71,8 @@ final class HasTransactionCallsTest extends TestCase
         ]);
 
         try {
-            $post->transaction(fn(Post $post) => $post->updateException());
-        } catch(Exception $exception) {
+            $post->transaction(fn (Post $post) => $post->updateException());
+        } catch (Exception $exception) {
             $this->assertInstanceOf(RuntimeException::class, $exception);
         }
 

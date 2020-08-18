@@ -18,7 +18,7 @@ trait HasTransactionalCalls
             return new TransactionProxy($this);
         }
 
-        DB::transaction(fn() => $callback($this));
+        DB::transaction(fn () => $callback($this));
 
         return $this;
     }
