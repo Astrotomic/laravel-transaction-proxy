@@ -10,7 +10,7 @@ trait HasTransactionalCalls
     /**
      * @param Closure|null $callback
      *
-     * @return TransactionProxy|mixed
+     * @return static|TransactionProxy|mixed
      */
     public function transaction(?Closure $callback = null)
     {
