@@ -1,0 +1,49 @@
+{
+    "name": "astrotomic/laravel-transaction-proxy",
+    "description": "This package provides a trait and class to call methods in a database transaction.",
+    "keywords": [
+        "laravel",
+        "eloquent",
+        "database",
+        "database-transaction",
+        "transaction-proxy",
+        "proxy"
+    ],
+    "homepage": "https://github.com/Astrotomic/laravel-transaction-proxy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Witkowski",
+            "email": "gummibeer@astrotomic.info",
+            "homepage": "https://astrotomic.info",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "illuminate/database": "^7.0",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Astrotomic\\LaravelTransactionProxy\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Astrotomic\\LaravelTransactionProxy\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "test": "vendor/bin/pest"
+    }
+}
