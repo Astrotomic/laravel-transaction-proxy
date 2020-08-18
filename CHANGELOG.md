@@ -4,7 +4,7 @@ All notable changes to `laravel-transaction-proxy` will be documented in this fi
 
 ## 0.2.1 - 2020-08-18
 
-- add `static` to return types for better auto-completion
+-   add `static` to return types for better auto-completion
 
 ## 0.2.0 - 2020-08-18
 
