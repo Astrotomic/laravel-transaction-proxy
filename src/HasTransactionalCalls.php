@@ -10,7 +10,7 @@ trait HasTransactionalCalls
     /**
      * @param Closure|null $callback
      *
-     * @return static|TransactionProxy
+     * @return TransactionProxy|mixed
      */
     public function transaction(?Closure $callback = null)
     {
@@ -18,8 +18,6 @@ trait HasTransactionalCalls
             return new TransactionProxy($this);
         }
 
-        DB::transaction(fn () => $callback($this));
-
-        return $this;
+        return DB::transaction(fn () => $callback($this));
     }
 }

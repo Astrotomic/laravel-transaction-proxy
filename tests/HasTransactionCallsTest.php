@@ -26,9 +26,9 @@ final class HasTransactionCallsTest extends TestCase
             'name' => 'test',
         ]);
 
-        $post->transaction()->update([
+        $this->assertTrue($post->transaction()->update([
             'name' => 'committed',
-        ]);
+        ]));
 
         $this->assertSame('committed', $post->refresh()->name);
     }
@@ -56,9 +56,9 @@ final class HasTransactionCallsTest extends TestCase
             'name' => 'test',
         ]);
 
-        $post->transaction(fn (Post $post) => $post->update([
+        $this->assertTrue($post->transaction(fn (Post $post) => $post->update([
             'name' => 'committed',
-        ]));
+        ])));
 
         $this->assertSame('committed', $post->refresh()->name);
     }
