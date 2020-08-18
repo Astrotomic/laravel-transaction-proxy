@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class TransactionProxy
 {
-    protected $object;
+    protected object $object;
 
     /**
      * @param object $object
@@ -16,7 +16,7 @@ class TransactionProxy
         $this->object = $object;
     }
 
-    public function __call($name, $arguments)
+    public function __call(string $name, array $arguments)
     {
         return DB::transaction(fn () => call_user_func_array([$this->object, $name], $arguments));
     }
