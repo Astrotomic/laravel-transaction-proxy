@@ -2,6 +2,10 @@
 
 All notable changes to `laravel-transaction-proxy` will be documented in this file
 
+## 0.3.0 - 2020-11-19
+
+-   add Laravel 8 and PHP 8 support
+
 ## 0.2.1 - 2020-08-18
 
 -   add `static` to return types for better auto-completion
