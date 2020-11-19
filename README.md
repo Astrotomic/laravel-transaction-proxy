@@ -1,4 +1,4 @@
-# Laravel TransactionProxy
+# Laravel Transaction Proxy
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-transaction-proxy.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-transaction-proxy)
 [![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-transaction-proxy.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-transaction-proxy/blob/master/LICENSE)
